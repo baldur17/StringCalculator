@@ -2,8 +2,8 @@ function add (number){
   if(number == ""){
     return 0;
   }
-  if(number.includes(",")){
-    var numberArray = number.split(",");
+  if(number.includes(",") || number.includes("\n")){
+    var numberArray = number.replace(/\n/g, ",").split(",");
     return sum(numberArray);
   }
   return parseInt(number);
