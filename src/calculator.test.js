@@ -11,3 +11,7 @@ it("should return zero on an empty string", () => {
 it("should return zero on an empty string", () => {
   expect(add("4,5")).toBe(9);
 });
+
+it("should return zero on an empty string", () => {
+  expect(add("1,2,3")).toBe(6);
+});
