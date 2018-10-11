@@ -6,12 +6,11 @@ function add (number){
   {
     throw "Negatives not allowed: " + number;
   }
+  var numbers = number.replace(/[^0-9-]/g,',').split(',').filter(emptystring);
 
-  if(number.includes(",") || number.includes("\n")){
-    var numberArray = number.replace(/\n/g, ",").split(",");
-    negativenumbers(numberArray);
-    return sum(numberArray);
-  }
+  console.log(numbers);
+  negativenumbers(numbers);
+  return sum(numbers);
   return parseInt(number);
 }
 
@@ -39,5 +38,7 @@ function negativecheck(number){
 function numberrangecheck(number){
   return number < 1000;
 }
-
+function emptystring(number){
+  return number;
+}
 module.exports = add;

@@ -29,3 +29,7 @@ test('should throw negative error: -2', () => {
 it("should return 2", () => {
   expect(add("1001,2")).toBe(2);
 });
+
+it("should return 3", () => {
+  expect(add(";1;2")).toBe(3);
+});
