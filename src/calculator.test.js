@@ -33,3 +33,9 @@ it("should return 2", () => {
 it("should return 3", () => {
   expect(add(";1;2")).toBe(3);
 });
+
+it("should return 48", () => {
+  expect(add(";.23,2;;12?9T2")).toBe(48);
+});
+//skildi ekki alveg lið 6 testin tvö fyrir ofan eiga vera fyrir það.
+//skildi það sem að það ætti að samþykkja og filtera ut alla delimetera.
