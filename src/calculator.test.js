@@ -25,3 +25,7 @@ test('should throw negative error: -2', () => {
     add('1,-2,3');
   }).toThrow();
 });
+
+it("should return 2", () => {
+  expect(add("1001,2")).toBe(2);
+});

@@ -15,11 +15,12 @@ function add (number){
   return parseInt(number);
 }
 
-function sum(numberArray){
+function sum(numberarray){
   var retValue = 0;
+  var numbersfiltered = numberarray.filter(numberrangecheck);
 
-  for(var i = 0; i < numberArray.length; i++){
-      retValue = retValue + parseInt(numberArray[i]);
+  for(var i = 0; i < numbersfiltered.length; i++){
+      retValue = retValue + parseInt(numbersfiltered[i]);
   }
   return retValue;
 }
@@ -34,6 +35,9 @@ function negativenumbers(numbers){
 
 function negativecheck(number){
   return number < 0;
+}
+function numberrangecheck(number){
+  return number < 1000;
 }
 
 module.exports = add;
